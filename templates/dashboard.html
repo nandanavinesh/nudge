@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nudge — Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Nudge 🧠</h1>
+        <p class="subtitle">Track your day. Understand yourself.</p>
+
+        <div class="nav">
+            <a href="/">Log Today</a>
+            <a href="/dashboard" class="active">Dashboard</a>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <p class="stat-label">Average Score</p>
+                <p class="stat-value" id="avg-score">--</p>
+            </div>
+            <div class="stat-card">
+                <p class="stat-label">Tomorrow's Prediction</p>
+                <p class="stat-value" id="prediction">--</p>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <h2>Productivity Score Over Time</h2>
+            <canvas id="productivityChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+            <h2>Screen Time Breakdown</h2>
+            <canvas id="screenTimeChart"></canvas>
+        </div>
+
+        <div class="insights-card">
+            <h2>Your Insights 💡</h2>
+            <div id="insights-list"></div>
+        </div>
+    </div>
+
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>
